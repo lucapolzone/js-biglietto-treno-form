@@ -1,40 +1,42 @@
-//Input utente
-const userNameInput = document.getElementById('user-name');
-const travelKmInput = document.getElementById('travel-km');
+//### Input utente
+
+//Nome passeggero
+const userNameInput = document.getElementById("user-name");
+
+//Numero km
+const travelKmInput = document.getElementById("travel-km");
+
+//Fascia età del passeggero
+const ageRangeInput = document.getElementById("age-range");
+
+
+//### UTILS variables
 
 //Bottone "Genera"
-const printButton = document.getElementById('print-button');
+const printButton = document.getElementById("print-button");
 
-//Assegno una variabile alla tariffa di partenza del biglietto
-const baseTicket = 0.21;
+//Bottone "Annulla", per l'animazione della scomparsa
+const resetButton = document.getElementById("reset-button");
 
-//Prezzo finale del biglietto
-const finalTicketPrice = document.getElementById('final-ticket-price');
+//Bottom container, per l'animazione della scomparsa
+const bottomContainer = document.getElementById("ms_bottom-container")
 
+//Per stampare il nome
+const printName = document.getElementById("print-name");
 
+//Per stampare il prezzo
+const printPrice = document.getElementById("print-price");
 
-//Funzione sul bottone
-printButton.addEventListener('click', function() {
+//Per stampare l'offerta per fascia d'età
+const printOffer = document.getElementById("print-offer");
 
-    //Input Nome
-    const userName = userNameInput.value;
-    console.log(userName);
-    
-    //Input num Km
-    const travelKm = parseInt(travelKmInput.value);
-    console.log(travelKm);
+//Tariffa di partenza del biglietto
+const baseTicketRate = 0.21;
 
-    //Calcolo il prezzo totale del biglietto
-    const totalTicketPrice = (baseTicket * travelKm).toFixed(2);
-    console.log(totalTicketPrice);
+//Per stampare il numero randomico della carrozza
+const printCarriage = document.getElementById("print-carriage");
 
-    //Stampo il risultato
-    finalTicketPrice.innerText = 'Il tuo biglietto costa €' + totalTicketPrice;
-
-  }
-);
-
-
-
+//Per stampare il numero randomico cp
+const printCP = document.getElementById("print-cp");
 
 
