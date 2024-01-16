@@ -29,6 +29,10 @@ Visualizzare il biglietto solo dopo che l'utente ha cliccato sul bottone.
 ## Svolgimento
 
 - Richiamo gli input dell'utente e assegno le variabili
-- Assegno una variabile alla tariffa di partenza del biglietto
-- Assegno una variabile al prezzo finale del biglietto
-- Applico al bottone "Genera" la funzione per fare il calcolo
+- Creo un evento sul bottone "Genera"
+  - Richiamo le variabili degli input dell'utente
+  - Calcolo gli sconti
+  - Applico gli sconti in base alla fascia d'età
+  - Creo dei numeri randomici per numero carrozza e CP
+- Creo un evento sul bottone "Annulla"
+  - Applico l'animazione a scomparsa sul bottone
