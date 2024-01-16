@@ -9,9 +9,35 @@ li {
   list-style-type: none;
 }
 
+body {
+  background-color: #b91450;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #b91450;
+}
+
+#age-range {
+  background-color: white;
+}
+
+
 /* ======================= */
 
-#ms_container {
-  max-width: 1180px;
-  border: 3px dotted #cecece;
+.wrapper {
+  max-width: 1300px;
+}
+
+.ms_secondary_container {
+  width: fit-content;
+}
+
+.wrapper {
+  background-color: white;
+
 }
