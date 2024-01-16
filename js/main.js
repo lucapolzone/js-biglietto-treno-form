@@ -110,3 +110,7 @@ printButton.addEventListener("click", function() {
   }
 );
 
+//Animazione scomparsa
+resetButton.addEventListener("click", function() {
+  bottomContainer.classList.add("d-none");
+});
