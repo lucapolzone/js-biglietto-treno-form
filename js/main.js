@@ -40,3 +40,73 @@ const printCarriage = document.getElementById("print-carriage");
 const printCP = document.getElementById("print-cp");
 
 
+
+//Evento sul bottone
+printButton.addEventListener("click", function() {
+
+    //Input Nome
+    const userName = userNameInput.value;
+    console.log(userName);
+    
+    //Input num Km
+    const travelKm = parseInt(travelKmInput.value);
+    console.log(travelKm);
+
+    //Richiamo l'input per la fascia d'età
+    const ageRange = ageRangeInput.value;
+
+    //Calcolo del biglietto senza sconti
+    const baseTicketPrice = travelKm * baseTicketRate;
+    console.log(baseTicketPrice);
+
+    //Stampa il nome
+    printName.innerText = userName;
+    
+    //Stampa il prezzo
+    printPrice.innerText = baseTicketPrice + "€";
+
+
+
+    if (ageRange == "minorenne") {
+
+      //Calcolo lo sconto
+      const youngDiscount = baseTicketPrice * 20 / 100;
+      
+      //Applico lo sconto
+      const youngTicket = (baseTicketPrice - youngDiscount).toFixed(2);
+      
+      printPrice.innerText = youngTicket + "€";
+      
+      printOffer.innerText = "Offerta 20% sconto";
+    
+    } else if (ageRange == "over-65") {
+
+      //Calcolo lo sconto
+      const elderDiscount = baseTicketPrice * 40 / 100;
+
+      //Applico lo sconto
+      const elderTicket = (baseTicketPrice - elderDiscount).toFixed(2);
+      
+      printOffer.innerText = "Offerta 40% sconto";
+      
+      printPrice.innerText = elderTicket + "€";
+    
+    } else {
+      printOffer.innerText = "Tariffa base";
+      
+      const finalTicketPrice = baseTicketPrice.toFixed(2);
+
+      printPrice.innerText = finalTicketPrice + "€";
+
+    }
+
+    //numero carrozza randomico
+    printCarriage.innerText = Math.floor(Math.random() * 10 + 1);
+
+    //codice CP biglietto randomico
+    printCP.innerText = Math.floor(Math.random() * 99999 + 1);
+
+    bottomContainer.classList.remove("d-none");
+  }
+);
+
